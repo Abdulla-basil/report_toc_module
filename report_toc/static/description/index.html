@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Report Table of Contents (ToC)</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            color: #444;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .header-section {
+            text-align: center;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eee;
+        }
+        h1 {
+            color: #008784; /* Odoo Professional Green */
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #2C3E50;
+            font-size: 24px;
+            margin-top: 40px;
+            border-left: 5px solid #008784;
+            padding-left: 15px;
+        }
+        .summary-text {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: auto;
+        }
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+        }
+        .feature-card {
+            flex: 1;
+            min-width: 280px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .feature-card i {
+            color: #008784;
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .screenshot-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .screenshot-container h3 {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .screenshot-img {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            max-width: 100%;
+            transition: transform 0.3s;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+        }
+        .screenshot-img:hover {
+            transform: scale(1.01);
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #008784;
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .tech-requirement {
+            background: #fff5f5;
+            border: 1px solid #feb2b2;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <span class="badge">Odoo 18.0 Optimized</span>
+            <h1>Report Table of Contents (ToC)</h1>
+            <p class="summary-text">
+                Transform long, complex PDF reports into professional documents with automated navigation and dynamic page mapping.
+            </p>
+        </div>
+
+        <h2>Why Use This Module?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <strong>✔ Dynamic Mapping</strong>
+                <p>Scans your PDF content to find specific headings and maps them to accurate page numbers.</p>
+            </div>
+            <div class="feature-card">
+                <strong>✔ Seamless Insertion</strong>
+                <p>Inject your ToC at any specific page index without breaking document flow.</p>
+            </div>
+            <div class="feature-card">
+                <strong>✔ Auto-Pagination</strong>
+                <p>Automatically replaces and updates footers to ensure page numbers account for new ToC pages.</p>
+            </div>
+        </div>
+
+        <div class="tech-requirement">
+            <strong>⚠️ Technical Requirement:</strong> This module uses the <code>PyMuPDF</code> (fitz) library.
+            Ensure <code>pip install pymupdf</code> is executed on your server environment.
+        </div>
+
+        <h2>Centralized Configuration</h2>
+        <div class="screenshot-container">
+            <h3>Easily manage all your Report ToCs under the Technical menu.</h3>
+            <img src="assets/screenshots/img1.png" class="screenshot-img" alt="TOC Menu in Technical Settings"/>
+        </div>
+
+        <h2>Comprehensive Rule Engine</h2>
+        <div class="screenshot-container">
+            <h3>Configure page insertion, PDF templates, and search markers in one view.</h3>
+            <img src="assets/screenshots/img2.png" class="screenshot-img" alt="TOC Configuration Form View"/>
+            <p style="text-align: left; font-size: 14px; color: #666; margin-top: 10px;">
+                Define your <strong>Search Text</strong> (right) to find content in the PDF and your <strong>ToC Heading</strong> (left) to display it in the Table of Contents.
+            </p>
+        </div>
+
+        <h2>Professional Output</h2>
+        <div class="screenshot-container">
+            <h3>Beautifully rendered ToC pages that match Odoo 18's design language.</h3>
+            <img src="assets/screenshots/img3.png" class="screenshot-img" alt="Final PDF Table of Contents Output"/>
+        </div>
+
+        <footer>
+            Developed by <strong>Abdulla Basil</strong> | Licensed under AGPL-3
+        </footer>
+    </div>
+</body>
+</html>

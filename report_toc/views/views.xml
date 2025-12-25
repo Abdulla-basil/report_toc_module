@@ -10,6 +10,7 @@
                         <field name="insert_page"/>
                         <field name="main_report_id"/>
                         <field name="toc_report_id"/>
+                        <field name="footer_content"/>
                         <field name="active"/>
                     </group>
 
