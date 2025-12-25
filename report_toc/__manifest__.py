@@ -7,7 +7,7 @@
     "version": "18.0.1.0.0",
     "category": "Reporting",
     "author": "Abdulla Basil",
-    "website": "https://github.com/your-repo-link",  # Update with your actual URL
+    "website": "https://github.com/Abdulla-basil/report_toc_module.git",  # Update with your actual URL
     "license": "AGPL-3",
     "application": True,
     "installable": True,
