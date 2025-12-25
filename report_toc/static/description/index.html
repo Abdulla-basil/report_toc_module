@@ -2,270 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Report Table of Contents (ToC) - Odoo 18</title>
-    <style>
-        :root {
-            --primary: #008784; /* Odoo Teal */
-            --secondary: #2C3E50; /* Dark Blue-Grey */
-            --bg-light: #F8F9FA; /* Very Light Grey */
-            --text-muted: #6C757D; /* Grey Text */
-            --border-color: #DEE2E6;
-        }
-
-        body {
-            font-family: 'Inter', 'Lato', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #FFFFFF;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #fdfdfd 0%, #f1f7f7 100%);
-            border-radius: 15px;
-            margin-bottom: 50px;
-            border: 1px solid #f0f0f0;
-        }
-
-        .badge {
-            background: var(--primary);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            font-size: 42px;
-            color: var(--secondary);
-            margin: 10px 0 20px 0;
-            font-weight: 700;
-        }
-
-        .lead {
-            font-size: 19px;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: auto;
-        }
-
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 50px 0;
-        }
-
-        .feature-card {
-            padding: 30px;
-            background: white;
-            border: 1px solid #E9ECEF;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-color: var(--primary);
-        }
-
-        .feature-card h3 {
-            color: var(--secondary);
-            margin-top: 0;
-            font-size: 18px;
-        }
-
-        /* Technical Alert */
-        .alert-info {
-            background-color: #e3fcfb;
-            border: 1px solid #008784;
-            color: #00605e;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 40px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        /* Showcase Section */
-        .showcase {
-            margin: 80px 0;
-        }
-
-        .showcase-item {
-            margin-bottom: 100px;
-        }
-
-        .showcase-header {
-            margin-bottom: 30px;
-            border-left: 5px solid var(--primary);
-            padding-left: 25px;
-        }
-
-        .showcase-header h2 {
-            margin: 0;
-            font-size: 28px;
-            color: var(--secondary);
-        }
-
-        .showcase-header p {
-            color: var(--text-muted);
-            margin: 8px 0 0;
-            font-size: 16px;
-        }
-
-        /* IMAGE STYLE 1: Full Width Wrapper (Fixes Clipping) */
-        .img-wrapper {
-            width: 100%;
-            background: #ffffff;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            box-sizing: border-box;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .img-wrapper img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        /* IMAGE STYLE 2: Small & Centered (For the PDF Output) */
-        .img-small-container {
-            width: 100%;
-            display: flex;
-            justify-content: center; /* Centers the image */
-        }
-
-        .img-small {
-            max-width: 550px; /* Limits the size */
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .img-small img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px;
-            border: 1px solid #eee;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 50px 0;
-            margin-top: 50px;
-            border-top: 1px solid #eee;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-    </style>
-</head>
+    <title>Report Table of Contents</title>
+    </head>
 <body>
 
-<div class="container">
+<div class="container" style="padding-top: 3rem; padding-bottom: 3rem;">
 
-    <div class="hero">
-        <span class="badge">Odoo 18 Certified</span>
-        <h1>Dynamic Report Table of Contents</h1>
-        <p class="lead">Elevate your professional documents with automated page mapping and high-fidelity navigation.
-            Stop manually updating page numbers today.</p>
-    </div>
-
-    <div class="features">
-        <div class="feature-card">
-            <h3>🔍 Smart PDF Scanning</h3>
-            <p>Automatically detects section headers inside your rendered PDF to determine exact page positions
-                instantly.</p>
-        </div>
-        <div class="feature-card">
-            <h3>📍 Precision Insertion</h3>
-            <p>Inject the generated ToC at any specific page index (e.g., Page 2) without breaking the document
-                flow.</p>
-        </div>
-        <div class="feature-card">
-            <h3>🔄 Auto-Pagination</h3>
-            <p>Smart footer redaction ensures "Page X of Y" numbering remains accurate even after adding new ToC
-                pages.</p>
-        </div>
-    </div>
-
-    <div class="alert-info">
-        <strong>⚠️ Technical Requirement:</strong> &nbsp; This module requires the Python <code>pymupdf</code> library.
-        Please run <code>pip install pymupdf</code> on your server.
-    </div>
-
-    <div class="showcase">
-
-        <div class="showcase-item">
-            <div class="showcase-header">
-                <h2>Native Integration</h2>
-                <p>Access the Table of Contents configuration directly from the Technical Settings menu.</p>
-            </div>
-            <div class="img-wrapper">
-                <img src="assets/screenshots/img1.png" alt="Odoo Settings Menu">
-            </div>
-        </div>
-
-        <div class="showcase-item">
-            <div class="showcase-header">
-                <h2>Powerful Rule Engine</h2>
-                <p>Define your ToC name, insertion page, and dynamic search markers in a clean, intuitive form view.</p>
-            </div>
-            <div class="img-wrapper">
-                <img src="assets/screenshots/img2.png" alt="Form View Configuration">
-            </div>
-            <p style="text-align: center; font-size: 14px; color: #666; margin-top: 15px; background: #f8f9fa; padding: 10px; border-radius: 8px;">
-                💡 <strong>Tip:</strong> The <em>Search Text</em> (right) locates the content, while the <em>ToC
-                Heading</em> (left) is what appears on the generated page.
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10 text-center">
+            <span class="badge badge-pill badge-primary px-3 py-2 mb-3" style="background-color: #008784; font-size: 1.1em;">
+                Compatible with Odoo 18.0
+            </span>
+            <h1 class="display-4 font-weight-bold" style="color: #2C3E50;">
+                Report Table of Contents (ToC)
+            </h1>
+            <p class="lead text-muted mt-3">
+                Transform long, complex PDF reports into professional documents with automated page mapping and high-fidelity navigation.
             </p>
+            <hr class="my-4" style="width: 50%; border-color: #008784;">
         </div>
+    </div>
 
-        <div class="showcase-item">
-            <div class="showcase-header">
-                <h2>Odoo 18 Styled Output</h2>
-                <p>Professional, clean output that matches Odoo's modern design language with dotted leaders and bold
-                    numbering.</p>
+    <div class="row mt-5 mb-5">
+        <div class="col-md-4 text-center mb-4">
+            <div class="p-4 border rounded shadow-sm h-100" style="background: #f8f9fa;">
+                <h3 style="color: #008784; font-weight: bold;">🔍 Smart Scanning</h3>
+                <p class="text-muted mt-3">
+                    Automatically detects section headers inside your rendered PDF to determine exact page positions instantly.
+                </p>
             </div>
-            <div class="img-small-container">
-                <div class="img-small">
-                    <img src="assets/screenshots/img3.png" alt="Final PDF Result">
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <div class="p-4 border rounded shadow-sm h-100" style="background: #f8f9fa;">
+                <h3 style="color: #008784; font-weight: bold;">📍 Precision Insert</h3>
+                <p class="text-muted mt-3">
+                    Inject the generated ToC at any specific page index (e.g., Page 2) without breaking the document flow.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <div class="p-4 border rounded shadow-sm h-100" style="background: #f8f9fa;">
+                <h3 style="color: #008784; font-weight: bold;">🔄 Auto-Pagination</h3>
+                <p class="text-muted mt-3">
+                    Redacts and corrects "Page X of Y" footers automatically to account for the newly added pages.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-10">
+            <div class="alert alert-info border-0 shadow-sm" role="alert" style="background-color: #e3fcfb; color: #00605e; border-left: 5px solid #008784;">
+                <div class="d-flex align-items-center">
+                    <strong class="mr-2" style="font-size: 1.5rem;">⚠️</strong>
+                    <div>
+                        <strong>Technical Requirement:</strong> This module requires the <code>pymupdf</code> library. <br>
+                        Please run <code>pip install pymupdf</code> on your Odoo server environment.
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <footer>
-        <p>Developed by <strong>Abdulla Basil</strong> | Licensed under AGPL-3</p>
-    </footer>
+    <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-lg-12">
+            <h2 class="font-weight-bold text-center mb-4" style="color: #2C3E50;">
+                Native Integration
+            </h2>
+            <p class="text-center text-muted mb-4">Access configurations directly from the Technical Settings menu.</p>
+            <div class="shadow rounded overflow-hidden border">
+                <img src="assets/screenshots/img1.png" class="img-fluid w-100" alt="Settings Menu">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-lg-12">
+            <h2 class="font-weight-bold text-center mb-4" style="color: #2C3E50;">
+                Powerful Rule Engine
+            </h2>
+            <p class="text-center text-muted mb-4">Define search markers and headings in a clean list view.</p>
+            <div class="shadow rounded overflow-hidden border">
+                <img src="assets/screenshots/img2.png" class="img-fluid w-100" alt="Form View Configuration">
+            </div>
+            <div class="text-center mt-2">
+                <small class="text-muted font-italic">
+                    💡 <strong>Tip:</strong> 'Search Text' finds the content, 'ToC Heading' displays it.
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-lg-12">
+            <h2 class="font-weight-bold text-center mb-4" style="color: #2C3E50;">
+                Professional PDF Output
+            </h2>
+            <p class="text-center text-muted mb-4">Clean, dotted-leader style that matches Odoo 18 standards.</p>
+        </div>
+
+        <div class="col-md-8 col-lg-6">
+            <div class="shadow rounded overflow-hidden border">
+                <img src="assets/screenshots/img3.png" class="img-fluid w-100" alt="PDF Output Result">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5 border-top pt-5">
+        <div class="col-12 text-center text-muted">
+            <p>Developed by <strong>Abdulla Basil</strong> &nbsp;|&nbsp; Licensed under AGPL-3</p>
+            <p style="font-size: 0.9rem;">Need help? Contact support or check the repository issues.</p>
+        </div>
+    </div>
 
 </div>
 
