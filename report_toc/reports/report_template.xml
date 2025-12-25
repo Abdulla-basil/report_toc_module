@@ -57,17 +57,6 @@
                                 </tr>
                             </thead>
 
-
-                            <!--                            <t t-set="safe_data" t-value="data or {}"/>-->
-
-                            <!--                            <t t-set="toc_map"-->
-                            <!--                               t-value="safe_data.get('toc_page_map', {})"/>-->
-
-                            <!--                            <t t-set="toc_id"-->
-                            <!--                               t-value="safe_data.get('toc_id')"/>-->
-
-                            <!--                            <t t-set="toc"-->
-                            <!--                               t-value="toc_id and env['report.toc'].browse(toc_id) or False"/>-->
                             <t t-set="toc_map" t-value="toc_page_map or {}"/>
 
                             <tbody>
