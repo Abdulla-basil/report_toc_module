@@ -25,8 +25,9 @@
         "reports/report_action.xml",
         "reports/report_template.xml",
     ],
-    "images": [
-        "static/description/banner.png",
+    'images': [
+        'static/description/banner.png',
+        'static/description/icon.png',
     ],
     "description": """
 Table of Contents for Odoo Reports
